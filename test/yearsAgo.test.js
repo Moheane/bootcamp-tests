@@ -6,6 +6,6 @@ describe('yearsAgo test', function(){
         assert.equal(2,yearsAgo(2019))
     });
     it('return 0 years when given current year as an argument', function(){
-        assert.equal(2,yearsAgo(2019))
+        assert.equal(0,yearsAgo(2021))
     });
 })
