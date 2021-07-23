@@ -12,3 +12,6 @@ function totalPhoneBill(callsMadeAndSmsSentString) {
     }
     return "R" + totalBill.toFixed(2);
 }
+
+var a = totalPhoneBill('call, sms, call, sms, sms');
+console.log(a)
