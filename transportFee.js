@@ -7,6 +7,8 @@ function transportFee(Shift) {
         case "nightshift":
             return "free";
         default:
-            return "for the night shift retrn free";
+            return "for the night shift return free";
     }
 }
+var a = transportFee('afternoon')
+console.log(a)
