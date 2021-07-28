@@ -8,3 +8,5 @@ function findItemsOver20(itemList) {
     }
     return list;
 }
+
+var a = findItemsOver20()
