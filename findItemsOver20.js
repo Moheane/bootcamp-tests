@@ -1,12 +1,13 @@
-function findItemsOver20(itemList) {
-    const list = [];
+function findItemsOver20(itemList){
 
-    for (var i = 0; i < itemList.length; i++) {
-        if (itemList[i].qty > 20) {
-            list.push(itemList[i]);
-        }
+    const itemlist = [];
+    
+      for (var i = 0; i < itemList.length; i++){
+      if(itemList[i].qty > 20){
+       itemlist.push(itemList[i]);
+         
+         }
+      
+      }
+      return  itemlist; 
     }
-    return list;
-}
-
-var a = findItemsOver20()

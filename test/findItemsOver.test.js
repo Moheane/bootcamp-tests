@@ -1,25 +1,57 @@
-describe('itemsOver test', function(){
-    it('returns "true" if the day given is Monday', function(){
-        assert.equal(true, isWeekday('Monday'))
-    });
-    it('returns "true" if the day given is Tuesday', function(){
-        assert.equal(true, isWeekday('Tuesday'))
-    });
-    it('returns "true" if the day given is Wednesday', function(){
-        assert.equal(true, isWeekday('Wednesday'))
-    });
-    it('returns "true" if the day given is Thursday', function(){
-        assert.equal(true, isWeekday('Thursday'))
-    });
-    it('returns "true" if the day given is Friday', function(){
-        assert.equal(true, isWeekday('Friday'))
-    });
-    it('returns "false" if the day given is Sarturday', function(){
-        assert.equal(false, isWeekday('Sarturday'))
-    });
-    it('returns "false" if the day given is Sunday', function(){
-        assert.equal(false, isWeekday('Sunday'))
+var itemList = [
+    {name : 'bananas', qty : 42},
+    {name : 'apples', qty : 19},
+    {name : 'orange', qty : 5},
+    {name : 'pears', qty : 63},
+    
+];
+
+var results = [
+    {name : 'bananas', qty : 42},
+    {name : 'pears', qty : 63},
+    
+];
+
+var itemList2 = [
+    {name : 'bananas', qty : 42},
+    {name : 'apples', qty : 19},
+    {name : 'orange', qty : 52},
+    {name : 'pears', qty : 63},
+];
+
+var results2 = [
+    {name : 'bananas', qty : 42},
+    {name : 'apples', qty : 19},
+    {name : 'orange', qty : 52},
+    {name : 'pears', qty : 63},
+];
+
+var itemList3 = [
+    {name : 'bananas', qty : 42},
+    {name : 'apples', qty : 19},
+    {name : 'oranges', qty : 5},
+    {name : 'pears', qty : 63},
+];
+
+var results3 = [
+    {name : 'bananas', qty : 42},
+    {name : 'pears', qty : 63},
+];
+
+describe('findItemsOver test' , function(){
+
+it('returns items over quantity of 20 from item list' , function(){
+    assert.deepEqual(results, findItemsOver(itemList, 20));
     });
 
-})
+it('returns items over quantity of 10 from item list' , function(){
+ assert.deepEqual(results2, findItemsOver(itemList2, 10));
+      
+    });
 
+it('returns items over quantity of 30 from item list' , function(){
+
+      assert.deepEqual(results3, findItemsOver(itemList3, 30));
+    });
+
+});

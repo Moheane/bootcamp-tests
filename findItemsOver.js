@@ -1,9 +1,10 @@
-function findItemsOver(listItem, itemList) {
-    const list1 = [];
-    for (var i in listItem) {
-        if (listItem[i].qty > itemList) {
-            list1.push(listItem[i])
-        }
+function findItemsOver(itemList,threshold){
+    const itemlst = [];
+      
+      for (var i in itemList){
+      if(itemList[i].qty > threshold){
+       itemlst.push(itemList[i]);
+      }
+         }
+      return  itemlst;
     }
-    return list1;
-}

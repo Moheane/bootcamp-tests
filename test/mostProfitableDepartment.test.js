@@ -1,25 +1,53 @@
-describe('mostProfitableDepartment test', function(){
-    it('returns "true" if the day given is Monday', function(){
-        assert.equal(true, isWeekday('Monday'))
-    });
-    it('returns "true" if the day given is Tuesday', function(){
-        assert.equal(true, isWeekday('Tuesday'))
-    });
-    it('returns "true" if the day given is Wednesday', function(){
-        assert.equal(true, isWeekday('Wednesday'))
-    });
-    it('returns "true" if the day given is Thursday', function(){
-        assert.equal(true, isWeekday('Thursday'))
-    });
-    it('returns "true" if the day given is Friday', function(){
-        assert.equal(true, isWeekday('Friday'))
-    });
-    it('returns "false" if the day given is Sarturday', function(){
-        assert.equal(false, isWeekday('Sarturday'))
-    });
-    it('returns "false" if the day given is Sunday', function(){
-        assert.equal(false, isWeekday('Sunday'))
+var salesData = [
+    {department : 'hardware', sales : 4500, day : 'Monday'},
+    {department : 'outdoor', sales : 1500, day : 'Monday'},
+    {department : 'carpentry', sales : 5500, day : 'Monday'},
+    {department : 'hardware', sales : 7500, day : 'Tuesday'},
+    {department : 'outdoor', sales : 2505, day : 'Tuesday'},
+    {department : 'carpentry', sales : 1540, day : 'Tuesday'},
+    {department : 'hardware', sales : 1500, day : 'Wednesday'},
+    {department : 'outdoor', sales : 8507, day : 'Wednesday'},
+    {department : 'carpentry', sales : 8009, day : 'Wednesday'},
+    {department : 'hardware', sales : 12000, day : 'Thursday'},
+    {department : 'outdoor', sales : 18007, day : 'Thursday'},
+    {department : 'carpentry', sales : 6109, day : 'Thursday'},
+    {department : 'hardware', sales : 7005, day : 'Friday'},
+    {department : 'outdoor', sales : 12006, day : 'Friday'},
+    {department : 'carpentry', sales : 16109, day : 'Friday'},
+];
+
+var salesData2 = [
+    {department : 'electronics', sales : 4500, day : 'Monday'},
+    {department : 'outdoor', sales : 1500, day : 'Monday'},
+    {department : 'carpentry', sales : 5500, day : 'Monday'},
+    {department : 'steelwork', sales : 7500, day : 'Tuesday'},
+    {department : 'outdoor', sales : 2505, day : 'Tuesday'},
+    {department : 'carpentry', sales : 1540, day : 'Tuesday'},
+    {department : 'hardware', sales : 1500, day : 'Wednesday'},
+    {department : 'outdoor', sales : 8507, day : 'Wednesday'},
+    {department : 'carpentry', sales : 8009, day : 'Wednesday'},
+    {department : 'hardware', sales : 12000, day : 'Thursday'},
+    {department : 'carpentry', sales : 6109, day : 'Thursday'},
+    {department : 'hardware', sales : 7005, day : 'Friday'},
+    {department : 'electronics', sales : 12006, day : 'Friday'},
+    {department : 'electronics', sales : 16109, day : 'Saturday'},
+    {department : 'steelwork', sales : 7500, day : 'Tuesday'},
+    {department : 'outdoor', sales : 2505, day : 'Tuesday'},
+    {department : 'carpentry', sales : 1540, day : 'Tuesday'},
+    {department : 'steelwork', sales : 1500, day : 'Wednesday'},
+    {department : 'carpentry', sales : 8009, day : 'Wednesday'},
+];
+
+describe('findItemsOver test' , function(){
+
+it('returns "outdoor" as most profitable from sales data' , function(){
+    assert.equal('outdoor', mostProfitableDepartment(salesData), "Most profitable department is 'outdoor' for dataset 1");
     });
 
-})
+it('returns "electronics" as most profitable from sales data2' , function(){
+    assert.equal('electronics', mostProfitableDepartment(salesData2), "Most profitable department is 'electronics' for dataset 2"); 
 
+      
+    });
+
+});
